@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Stack Hack 2026 — custom styles
+   Fonts, caution-stripe pattern, hero decorative blobs, and small helpers
+   that are awkward to express purely with Tailwind utility classes.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Web fonts
+   The Figma references these families. Drop the matching files into
+   assets/fonts/ (see assets/README.md). Until then the fallback stacks
+   below keep the layout looking close.
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Les Flos Sans";
+  src: url("assets/fonts/LesFlosSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Les Flos Sage";
+  src: url("assets/fonts/LesFlosSage-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Les Flos Chaos";
+  src: url("assets/fonts/LesFlosChaos-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("assets/fonts/BarlowCondensed-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("assets/fonts/Metropolis-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Metropolis";
+  src: url("assets/fonts/Metropolis-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --maroon: #6b0000;
+  --maroon-dark: #3a0000;
+  --gold: #f0a500;
+  --cream: #fdf4e7;
+  --section-alt: #fff8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream);
+}
+
+/* Display font stacks (fallbacks until brand fonts are supplied) */
+.font-display-sans {
+  font-family: "Les Flos Sans", "Oswald", "Barlow Condensed", "Inter", sans-serif;
+}
+.font-display-sage {
+  font-family: "Les Flos Sage", "Oswald", "Barlow Condensed", "Inter", sans-serif;
+}
+.font-display-chaos {
+  font-family: "Les Flos Chaos", "Oswald", "Barlow Condensed", "Inter", sans-serif;
+}
+.font-condensed {
+  font-family: "Barlow Condensed", "Oswald", "Inter", sans-serif;
+}
+.font-metropolis {
+  font-family: "Metropolis", "Inter", system-ui, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Caution-stripe divider band (maroon / gold hazard pattern)
+   -------------------------------------------------------------------------- */
+.caution-stripe {
+  width: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--maroon) 0,
+    var(--maroon) 20px,
+    var(--gold) 20px,
+    var(--gold) 40px
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Hero decorative rounded squares ("blob field")
+   -------------------------------------------------------------------------- */
+.blob {
+  position: absolute;
+  border-radius: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   FAQ accordion
+   -------------------------------------------------------------------------- */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-item.open .faq-answer {
+  max-height: 240px;
+}
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+}
+.faq-toggle {
+  transition: transform 0.25s ease;
+}
