@@ -27,28 +27,34 @@
   <!-- Inter fallback from Google Fonts (until brand fonts are dropped in) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="text-[#6b0000]">
 
-  <!-- ===================== NAV ===================== -->
-  <header class="sticky top-0 z-50 w-full pt-[15px] pb-[15px]">
-    <nav class="mx-auto flex max-w-[1024px] items-center justify-end px-6">
-      <div class="flex items-center gap-[5px] rounded-[20px] border border-[rgba(107,0,0,0.12)] bg-white/80 px-[16px] py-[11px] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] backdrop-blur">
-        <a href="#home"     class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">Home</a>
-        <a href="#prizes"   class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">Prizes</a>
-        <a href="#faq"      class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">FAQ</a>
-        <a href="#sponsors" class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">Sponsors</a>
-        <a href="#about"    class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">About</a>
-      </div>
-    </nav>
-  </header>
-
   <!-- ===================== HERO ===================== -->
-  <section id="home" class="relative -mt-[92px] h-[951px] overflow-hidden bg-[#fdf4e7]">
+  <section id="home" class="relative h-[951px] overflow-hidden bg-[#fdf4e7]">
+
+    <!-- Top bar: logo (left) + nav pill (right), matching Figma placement -->
+    <div class="absolute inset-x-0 top-[33px] z-50 mx-auto max-w-[1411px] px-6">
+      <div class="flex items-center justify-between">
+        <!-- Logo mark -->
+        <a href="#home" class="block size-[56px] overflow-hidden rounded-[14px] bg-white/40">
+          <img src="assets/img/logo.png" alt="Stack Hack logo" class="size-full object-cover" />
+        </a>
+        <!-- Nav pill -->
+        <nav class="flex items-center gap-[5px] rounded-[20px] border border-[rgba(107,0,0,0.12)] bg-white/80 px-[16px] py-[11px] shadow-[0px_1px_4px_rgba(0,0,0,0.1)] backdrop-blur">
+          <a href="#home"     class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">Home</a>
+          <a href="#prizes"   class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">Prizes</a>
+          <a href="#faq"      class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">FAQ</a>
+          <a href="#sponsors" class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">Sponsors</a>
+          <a href="#about"    class="rounded-[18px] px-[20px] py-[7px] text-[17px] font-semibold text-[rgba(107,0,0,0.65)] transition hover:bg-[rgba(107,0,0,0.06)] hover:text-[#6b0000]">About</a>
+        </nav>
+      </div>
+    </div>
+
     <!-- Decorative rounded squares -->
     <div class="blob" style="left:-117px; top:-117px; width:288px; height:288px; background:#6b0000; opacity:.11; border-radius:12px; transform:rotate(18deg);"></div>
     <div class="blob" style="left:1144px; top:-49px; width:208px; height:208px; background:#f0a500; opacity:.16; border-radius:10px; transform:rotate(-22deg);"></div>
@@ -56,11 +62,6 @@
     <div class="blob" style="left:-22px; top:744px; width:224px; height:80px; background:#f0a500; opacity:.14; border-radius:8px; transform:rotate(-14deg);"></div>
     <div class="blob" style="left:813px; top:840px; width:160px; height:160px; background:#6b0000; opacity:.10; border-radius:8px; transform:rotate(30deg);"></div>
     <div class="blob" style="left:62px; top:476px; width:64px; height:64px; background:#f0a500; opacity:.18; border-radius:5px; transform:rotate(20deg);"></div>
-
-    <!-- Logo mark -->
-    <div class="absolute left-[53px] top-[33px] size-[83px] overflow-hidden rounded-[16px] bg-white/40">
-      <img src="assets/img/logo.png" alt="Stack Hack logo" class="size-full object-cover" />
-    </div>
 
     <!-- Headline -->
     <div class="relative mx-auto h-full max-w-[1024px] px-6">
@@ -75,7 +76,6 @@
     </div>
   </section>
 
-  <div class="caution-stripe" style="height:18px;"></div>
 
   <!-- ===================== ABOUT ===================== -->
   <section id="about" class="bg-[#fff8f0] px-6 py-[96px]">
@@ -110,7 +110,6 @@
     </div>
   </section>
 
-  <div class="caution-stripe" style="height:12px;"></div>
 
   <!-- ===================== PRIZES ===================== -->
   <section id="prizes" class="bg-[#fdf4e7] px-6 py-[96px]">
@@ -143,7 +142,6 @@
     </div>
   </section>
 
-  <div class="caution-stripe" style="height:12px;"></div>
 
   <!-- ===================== SCHEDULE ===================== -->
   <section id="schedule" class="bg-[#fff8f0] px-6 py-[96px]">
@@ -169,7 +167,6 @@
     </div>
   </section>
 
-  <div class="caution-stripe" style="height:12px;"></div>
 
   <!-- ===================== SPONSORS ===================== -->
   <section id="sponsors" class="bg-[#fdf4e7] px-6 py-[96px]">
@@ -205,7 +202,6 @@
     </div>
   </section>
 
-  <div class="caution-stripe" style="height:12px;"></div>
 
   <!-- ===================== FAQ ===================== -->
   <section id="faq" class="bg-[#fff8f0] px-6 py-[96px]">
@@ -268,7 +264,6 @@
     </div>
   </section>
 
-  <div class="caution-stripe" style="height:12px;"></div>
 
   <!-- ===================== CONTACT ===================== -->
   <section id="contact" class="bg-[#fdf4e7] px-6 py-[96px]">
@@ -309,7 +304,6 @@
     </div>
   </section>
 
-  <div class="caution-stripe" style="height:20px;"></div>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="border-t border-[rgba(107,0,0,0.08)] bg-[#fdf4e7] px-6 pt-[33px] pb-[32px]">
