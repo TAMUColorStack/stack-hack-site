@@ -45,3 +45,29 @@ document.querySelectorAll(".faq-trigger").forEach(function (btn) {
 
   targets.forEach(function (el) { io.observe(el); });
 })();
+
+// Hero background shapes lean toward the cursor (parallax). Uses the
+// `transform` property so it composes with the blobs' float (`translate`)
+// and rotation (`rotate`).
+(function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var hero = document.getElementById("home");
+  if (!hero) return;
+  var blobs = hero.querySelectorAll(".blob");
+  if (!blobs.length) return;
+
+  hero.addEventListener("mousemove", function (e) {
+    var r = hero.getBoundingClientRect();
+    var dx = (e.clientX - r.left) / r.width - 0.5;   // -0.5 .. 0.5
+    var dy = (e.clientY - r.top) / r.height - 0.5;
+    blobs.forEach(function (b, i) {
+      var depth = ((i % 3) + 1) * 16; // nearer/farther shapes move differently
+      b.style.transform =
+        "translate(" + (dx * depth).toFixed(1) + "px," + (dy * depth).toFixed(1) + "px)";
+    });
+  });
+
+  hero.addEventListener("mouseleave", function () {
+    blobs.forEach(function (b) { b.style.transform = ""; });
+  });
+})();

@@ -113,7 +113,10 @@ body {
 }
 .blob {
   animation: blobFloat 9s ease-in-out infinite;
-  will-change: translate;
+  /* `translate` = floating drift (keyframes), `rotate` = inline rotation,
+     `transform` = mouse parallax (set by JS) — three composable channels. */
+  transition: transform 0.4s ease-out;
+  will-change: translate, transform;
 }
 .blob:nth-child(1) { animation-duration: 11s; animation-delay: -2s; }
 .blob:nth-child(2) { animation-duration: 8s;  animation-delay: -4s; }
