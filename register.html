@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1459" />
+  <title>Registration — Stack Hack 2026</title>
+  <meta name="description" content="Stack Hack 2026 registration — coming soon." />
+
+  <!-- Tailwind via CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="text-[#6b0000]">
+
+  <!-- Full-screen themed "under construction" panel -->
+  <main class="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#fdf4e7] px-6">
+
+    <!-- Decorative drifting shapes (same blob field as the hero) -->
+    <div class="blob" style="left:-117px; top:-117px; width:288px; height:288px; background:#6b0000; opacity:.11; border-radius:12px; rotate:18deg;"></div>
+    <div class="blob" style="left:1144px; top:-49px; width:208px; height:208px; background:#f0a500; opacity:.16; border-radius:10px; rotate:-22deg;"></div>
+    <div class="blob" style="left:1325px; top:317px; width:144px; height:144px; background:#6b0000; opacity:.12; border-radius:8px; rotate:45deg;"></div>
+    <div class="blob" style="left:-46px; top:744px; width:224px; height:80px; background:#f0a500; opacity:.14; border-radius:8px; rotate:-14deg;"></div>
+    <div class="blob" style="left:62px; top:476px; width:64px; height:64px; background:#f0a500; opacity:.18; border-radius:5px; rotate:20deg;"></div>
+
+    <!-- Card -->
+    <section class="relative z-10 w-full max-w-[640px] rounded-[28px] border-2 border-[rgba(107,0,0,0.08)] bg-white/80 px-[48px] py-[56px] text-center shadow-[0_20px_50px_rgba(107,0,0,0.10)] backdrop-blur">
+
+      <a href="index.html" class="mx-auto mb-[28px] block size-[72px] overflow-hidden rounded-[18px]">
+        <img src="assets/photos/TamuCS_reworked_logo.png" alt="Stack Hack logo" class="size-full object-cover" />
+      </a>
+
+      <!-- Pulsing status pill -->
+      <span class="inline-flex items-center gap-[10px] rounded-full border border-[rgba(240,165,0,0.55)] bg-white/70 px-[18px] py-[8px]">
+        <span class="relative flex h-[10px] w-[10px]">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#f0a500] opacity-75"></span>
+          <span class="relative inline-flex h-[10px] w-[10px] rounded-full bg-[#f0a500]"></span>
+        </span>
+        <span class="font-metropolis text-[12px] font-bold uppercase tracking-[1.5px] text-[#6b0000]">Coming Soon</span>
+      </span>
+
+      <h1 class="font-display-sans mt-[24px] text-[72px] uppercase leading-[0.9] tracking-[-1.8px] text-[#6b0000]">
+        Under<br /><span class="text-[#f0a500]">Construction</span>
+      </h1>
+
+      <p class="font-metropolis mx-auto mt-[20px] max-w-[420px] text-[16px] leading-[1.6] text-[rgba(107,0,0,0.55)]">
+        Registration isn't open just yet — we're still building it. Check back soon to sign up for Stack Hack 2026.
+      </p>
+
+      <a href="index.html" class="font-condensed mt-[36px] inline-block rounded-[16px] border-2 border-[#6b0000] px-[32px] py-[14px] text-[18px] uppercase tracking-[1px] text-[#6b0000] transition duration-300 hover:-translate-y-[3px] hover:bg-[#6b0000] hover:text-[#fdf4e7]">
+        Back to Home
+      </a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
